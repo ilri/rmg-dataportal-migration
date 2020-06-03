@@ -31,6 +31,9 @@ Some questions we need to answer:
   - `title` vs `ILRI_prjtitle`
   - `ILRI_prjstaff` vs `ILRI_actystaff`
   - `ILRI_prjpartners` vs `ILRI_actypartners`
+- Study more of CKAN's fields in the `package` and `package_extra` tables, in psql:
+  - Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
+  - Custom ILRI fields: `ckan=> SELECT DISTINCT key FROM package_extra;`
 - How to handle multi-value fields?
 
 ## License
