@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ilri-dataportal-migration"
+name = "rmg-dataportal-migration"
 version = "0.1.0"
 description = ""
 authors = ["Alan Orth <alan.orth@gmail.com>"]
