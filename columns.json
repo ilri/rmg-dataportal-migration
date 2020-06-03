@@ -1,0 +1,22 @@
+{
+  "title": {
+      "pattern": "^title$"
+  },
+  "subtitle": {
+      "pattern": "^notes$"
+  },
+  "alternativeURL": {
+      "pattern": "^ILRI_prjwebsite$"
+  },
+  "author": {
+      "pattern": "^(ILRI_actypi|ILRI_prjstaff$)"
+  },
+  "Format": {
+      "pattern": ["^resources$", "^format$"],
+      "case_sensitive": true,
+      "deduplicate": true
+  },
+  "publicationCitation": {
+      "pattern": "^ILRI_actycitation$"
+  }
+}
