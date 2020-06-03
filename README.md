@@ -1,5 +1,5 @@
 # ILRI Data Portal Migration
-A workflow using [ckanapi-exporter](https://github.com/ckan/ckanapi-exporter) to export metadata from ILRI's CKAN Data Portal to CSV for migration to other data repositories.
+A workflow using [ckanapi-exporter](https://github.com/ckan/ckanapi-exporter) to export metadata from ILRI's CKAN Data Portal to CSV for migration to other data repositories. Right now it is unclear whether we'll be aligning to Dataverse's own metadata or some other schema like DDI.
 
 ## Setup
 If you have [poetry](https://python-poetry.org/) installed you can set up and activate the environment like this:
@@ -18,9 +18,10 @@ $ pip install -r requirements.txt
 ```
 
 ## Running
+To export CKAN metadata into CSV format aligning with Dataverse metadata fields:
 
 ```console
-$ ckanapi-exporter --url https://data.ilri.org/portal --columns columns.json > output.csv
+$ ckanapi-exporter --url https://data.ilri.org/portal --columns columns-ckan2dataverse.json > output.csv
 ```
 
 ## License
