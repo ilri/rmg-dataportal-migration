@@ -10,7 +10,6 @@ python = "^2.7"
 ckanapi-exporter = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
-csvkit = "^1.0.5"
 
 [build-system]
 requires = ["poetry>=0.12"]
