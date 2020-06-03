@@ -35,6 +35,9 @@ Some questions we need to answer:
   - Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
   - Custom ILRI fields: `ckan=> SELECT DISTINCT key FROM package_extra;`
 - How to handle multi-value fields?
+  - Countries seem to use `+`
+  - Project partners seem to use `;`
+  - Authors seem to use `,`
 
 ## License
 This work is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
