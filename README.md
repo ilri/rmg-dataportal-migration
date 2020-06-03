@@ -1,4 +1,4 @@
-# ILRI Data Portal to Dataverse 
+# ILRI Data Portal Migration
 A workflow using [ckanapi-exporter](https://github.com/ckan/ckanapi-exporter) to export metadata from ILRI's CKAN Data Portal to CSV for migration to other data repositories.
 
 ## Setup

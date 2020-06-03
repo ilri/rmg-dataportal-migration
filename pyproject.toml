@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ilri-dataportal-to-dataverse"
+name = "ilri-dataportal-migration"
 version = "0.1.0"
 description = ""
 authors = ["Alan Orth <alan.orth@gmail.com>"]
