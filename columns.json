@@ -3,13 +3,16 @@
       "pattern": "^title$"
   },
   "subtitle": {
-      "pattern": "^notes$"
+      "pattern": "^ILRI_prjtitle$"
   },
   "alternativeURL": {
       "pattern": "^ILRI_prjwebsite$"
   },
   "author": {
       "pattern": "^(ILRI_actypi|ILRI_prjstaff$)"
+  },
+  "partners": {
+      "pattern": "^ILRI_prjpartners"
   },
   "Format": {
       "pattern": ["^resources$", "^format$"],
@@ -18,5 +21,24 @@
   },
   "publicationCitation": {
       "pattern": "^ILRI_actycitation$"
+  },
+  "region": {
+      "pattern": "^ILRI_prjregions$",
+      "deduplicate": true
+  },
+  "country": {
+      "pattern": "^ILRI_prjcountries$"
+  },
+  "subject": {
+      "pattern": "^ILRI_prjspecies"
+  },
+  "notesText": {
+      "pattern": "^notes$"
+  },
+  "grantNumberAgency": {
+      "pattern": "^ILRI_prjdonor$"
+  },
+  "grantNumberValue": {
+      "pattern": "^ILRI_prjgrant$"
   }
 }
