@@ -30,7 +30,7 @@
       "pattern": "^ILRI_prjcountries$"
   },
   "subject": {
-      "pattern": "^ILRI_prjspecies"
+      "pattern": "^ILRI_prjspecies$"
   },
   "notesText": {
       "pattern": "^notes$"
@@ -40,5 +40,8 @@
   },
   "grantNumberValue": {
       "pattern": "^ILRI_prjgrant$"
+  },
+  "license": {
+      "pattern": "^license_id$"
   }
 }
