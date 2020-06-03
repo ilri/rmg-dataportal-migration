@@ -4,6 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["Alan Orth <alan.orth@gmail.com>"]
 license = "GPL-3.0-only"
+repository = "https://github.com/ilri/rmg-dataportal-migration"
+homepage = "https://github.com/ilri/rmg-dataportal-migration"
 
 [tool.poetry.dependencies]
 python = "^2.7"
