@@ -24,6 +24,15 @@ To export CKAN metadata into CSV format aligning with Dataverse metadata fields:
 $ ckanapi-exporter --url https://data.ilri.org/portal --columns columns-ckan2dataverse.json > output.csv
 ```
 
+## TODO
+Some questions we need to answer:
+
+- How to handle some ambiguous metadata fields in CKAN:
+  - `title` vs `ILRI_prjtitle`
+  - `ILRI_prjstaff` vs `ILRI_actystaff`
+  - `ILRI_prjpartners` vs `ILRI_actypartners`
+- How to handle multi-value fields?
+
 ## License
 This work is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
