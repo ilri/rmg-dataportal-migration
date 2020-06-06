@@ -22,15 +22,30 @@
   "publicationCitation": {
       "pattern": "^ILRI_actycitation$"
   },
-  "region": {
+  "Project Region": {
       "pattern": "^ILRI_prjregions$",
       "deduplicate": true
   },
-  "country": {
-      "pattern": "^ILRI_prjcountries$"
+  "Activity Region": {
+      "pattern": "^ILRI_actyregions$",
+      "deduplicate": true
   },
-  "subject": {
+  "Project Country": {
+      "pattern": "^ILRI_prjcountries$",
+      "deduplicate": true
+  },
+  "Activity Country": {
+      "pattern": "^ILRI_actycountries$",
+      "deduplicate": true
+  },
+  "Project Subject": {
+      "pattern": "^ILRI_prjsubjects$"
+  },
+  "Project Species": {
       "pattern": "^ILRI_prjspecies$"
+  },
+  "Activity Species": {
+      "pattern": "^ILRI_actyspecies$"
   },
   "notesText": {
       "pattern": "^notes$"
@@ -43,5 +58,12 @@
   },
   "license": {
       "pattern": "^license_id$"
+  },
+  "Activity Product": {
+      "pattern": "^ILRI_actyproduct$"
+  },
+  "AGROVOC subjects": {
+      "pattern": ["tags", "name"],
+      "deduplicate": true
   }
 }
