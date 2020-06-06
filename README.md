@@ -40,6 +40,21 @@ Some questions we need to answer:
   - Project partners seem to use `;`
   - Authors seem to use `,`
 
+## Notes
+Some notes about extracting data from CKAN using the API:
+
+- Get a list of packages:
+
+    https://data.ilri.org/portal/api/3/action/package_list
+
+- Dump datasets in one package:
+
+    $ ckanapi dump datasets restoration-of-degraded-land -r https://data.ilri.org/portal --datapackages=./dump_directory/
+
+- Show JSON representation of one package / dataset:
+
+    $ ckanapi action package_show id=restoration-of-degraded-land -r https://data.ilri.org/portal
+
 ## License
 This work is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
