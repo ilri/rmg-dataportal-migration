@@ -63,7 +63,7 @@
       "pattern": "^ILRI_actyproduct$"
   },
   "AGROVOC subjects": {
-      "pattern": ["tags", "name"],
+      "pattern": ["^tags$", "name"],
       "deduplicate": true
   }
 }
