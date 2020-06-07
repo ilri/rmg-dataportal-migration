@@ -65,5 +65,8 @@
   "AGROVOC subjects": {
       "pattern": ["^tags$", "name"],
       "deduplicate": true
+  },
+  "organization": {
+      "pattern": ["^organization$", "^name$"]
   }
 }
