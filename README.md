@@ -24,17 +24,16 @@ To export CKAN metadata into CSV format aligning with Dataverse metadata fields:
 $ ckanapi-exporter --url https://data.ilri.org/portal --columns columns-ckan2dataverse.json > output.csv
 ```
 
+*N.B.*: The pattern specification in columns.json is very close to the structure of the JSON output from the CKAN API. See below for reference.
+
 ## TODO
 Some questions we need to answer:
 
-- How to handle some ambiguous metadata fields in CKAN:
+- How to handle some overlapping and ambiguous metadata fields in CKAN:
   - `title` vs `ILRI_prjtitle`
   - `ILRI_prjstaff` vs `ILRI_actystaff`
   - `ILRI_prjpartners` vs `ILRI_actypartners`
   - `ILRI_prjcountries` vs `ILRI_actycountries`
-- Study more of CKAN's fields in the `package` and `package_extra` tables, in psql:
-  - Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
-  - Custom ILRI fields: `ckan=> SELECT DISTINCT key FROM package_extra;`
 - How to handle multi-value fields?
   - Countries seem to use `+`
   - Project partners seem to use `;`
@@ -45,15 +44,24 @@ Some notes about extracting data from CKAN using the API:
 
 - Get a list of packages:
 
-    https://data.ilri.org/portal/api/3/action/package_list
+```
+$ curl https://data.ilri.org/portal/api/3/action/package_list
+```
+- Dump datasets in one package using the `ckanapi` client:
 
-- Dump datasets in one package:
+```
+$ ckanapi dump datasets restoration-of-degraded-land -r https://data.ilri.org/portal --datapackages=./dump_directory/
+```
 
-    $ ckanapi dump datasets restoration-of-degraded-land -r https://data.ilri.org/portal --datapackages=./dump_directory/
+- Show JSON representation of one package (dataset) using `ckanapi` client:
 
-- Show JSON representation of one package / dataset:
+```
+$ ckanapi action package_show id=restoration-of-degraded-land -r https://data.ilri.org/portal
+```
 
-    $ ckanapi action package_show id=restoration-of-degraded-land -r https://data.ilri.org/portal
+- See more of CKAN's metadata fields in the `package` and `package_extra` tables in PostgreSQL:
+  - Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
+  - Custom ILRI fields: `ckan=> SELECT DISTINCT key FROM package_extra;`
 
 ## License
 This work is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
