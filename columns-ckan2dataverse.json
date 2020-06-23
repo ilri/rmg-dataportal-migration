@@ -9,10 +9,14 @@
       "pattern": "^ILRI_prjwebsite$"
   },
   "author": {
-      "pattern": "^(ILRI_actypi|ILRI_prjstaff$)"
+      "pattern": "^(ILRI_actypi|ILRI_prjstaff|ILRI_actystaff$)",
+      "case_sensitive": true,
+      "deduplicate": true
   },
   "partners": {
-      "pattern": "^ILRI_prjpartners"
+      "pattern": "^(ILRI_prjpartners|ILRI_actypartners)$",
+      "case_sensitive": true,
+      "deduplicate": true
   },
   "Format": {
       "pattern": ["^resources$", "^format$"],
