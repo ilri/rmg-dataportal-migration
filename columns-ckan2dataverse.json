@@ -9,7 +9,7 @@
       "pattern": "^ILRI_prjwebsite$"
   },
   "author": {
-      "pattern": "^(ILRI_actypi|ILRI_prjstaff|ILRI_actystaff$)",
+      "pattern": "^(ILRI_actypi|ILRI_actypi|ILRI_prjstaff|ILRI_actystaff$)",
       "case_sensitive": true,
       "deduplicate": true
   },
