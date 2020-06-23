@@ -33,7 +33,9 @@ Some questions we need to answer:
   - `title` vs `ILRI_prjtitle`
   - `ILRI_prjstaff` vs `ILRI_actystaff`
   - `ILRI_prjpartners` vs `ILRI_actypartners`
+  - `ILRI_prjregions` vs `ILRI_actyregions` (strange that `ILRI_actyregions` don't appear in PostgreSQL keys, only in REST API responses!)
   - `ILRI_prjcountries` vs `ILRI_actycountries`
+  - `ILRI_prjpi` vs `ILRI_actypi`
 - How to handle multi-value fields?
   - Countries seem to use `+`
   - Project partners seem to use `;`
