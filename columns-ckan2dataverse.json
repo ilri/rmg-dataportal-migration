@@ -57,7 +57,7 @@
   "Activity Species": {
       "pattern": "^ILRI_actyspecies$"
   },
-  "notesText": {
+  "Abstract": {
       "pattern": "^notes$"
   },
   "grantNumberAgency": {
