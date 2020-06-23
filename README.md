@@ -42,26 +42,75 @@ Some questions we need to answer:
 ## Notes
 Some notes about extracting data from CKAN using the API:
 
-- Get a list of packages:
+Get a list of packages:
 
 ```
 $ curl https://data.ilri.org/portal/api/3/action/package_list
 ```
-- Dump datasets in one package using the `ckanapi` client:
+
+Dump datasets in one package using the `ckanapi` client:
 
 ```
 $ ckanapi dump datasets restoration-of-degraded-land -r https://data.ilri.org/portal --datapackages=./dump_directory/
 ```
 
-- Show JSON representation of one package (dataset) using `ckanapi` client:
+Show JSON representation of one package (dataset) using `ckanapi` client:
 
 ```
 $ ckanapi action package_show id=restoration-of-degraded-land -r https://data.ilri.org/portal
 ```
 
-- See more of CKAN's metadata fields in the `package` and `package_extra` tables in PostgreSQL:
-  - Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
-  - Custom ILRI fields: `ckan=> SELECT DISTINCT key FROM package_extra;`
+See more of CKAN's metadata fields in the `package` and `package_extra` tables in PostgreSQL:
+
+- Vanilla CKAN fields: `ckan=> SELECT * FROM package LIMIT 50;`
+- Custom ILRI fields:
+
+```
+ckan=# SELECT DISTINCT key FROM package_extra ORDER BY key;
+...
+ ILRI_actyboundbox
+ ILRI_actyboundboxcenter
+ ILRI_actycitation
+ ILRI_actycitationacknowledge
+ ILRI_actycontactemail
+ ILRI_actycontactperson
+ ILRI_actycustodian
+ ILRI_actycustodianemail
+ ILRI_actydataowner
+ ILRI_actydatavailable
+ ILRI_actydatecollected
+ ILRI_actydatecollectedend
+ ILRI_actyfarmconsent
+ ILRI_actyipownership
+ ILRI_actymapextent
+ ILRI_actymapzoom
+ ILRI_actynatlevel
+ ILRI_actyotheruse
+ ILRI_actypartners
+ ILRI_actypi
+ ILRI_actypiemail
+ ILRI_actyprojection
+ ILRI_actyrelconfdata
+ ILRI_actyresolution
+ ILRI_actysharingagreement
+ ILRI_actystaff
+ ILRI_actyusageconditions
+ ILRI_crpandprogram
+ ILRI_prjabstract
+ ILRI_prjcountries
+ ILRI_prjdonor
+ ILRI_prjedate
+ ILRI_prjgrant
+ ILRI_prjpartners
+ ILRI_prjpi
+ ILRI_prjpiemail
+ ILRI_prjregions
+ ILRI_prjsdate
+ ILRI_prjspecies
+ ILRI_prjstaff
+ ILRI_prjtitle
+ ILRI_prjwebsite
+```
 
 ## License
 This work is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
