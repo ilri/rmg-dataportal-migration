@@ -29,6 +29,9 @@
   "publicationCitation": {
       "pattern": "^ILRI_actycitation$"
   },
+  "Project Abstract": {
+      "pattern": "^ILRI_prjabstract$"
+  },
   "Project Region": {
       "pattern": "^ILRI_prjregions$",
       "deduplicate": true
