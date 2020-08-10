@@ -122,7 +122,7 @@
   "ILRI_actymapzoom": {
       "pattern": "^ILRI_actymapzoom$"
   },
-  "ILRI_actynatlevel": {
+  "subregion": {
       "pattern": "^ILRI_actynatlevel$"
   },
   "ILRI_actyotheruse": {
