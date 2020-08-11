@@ -79,8 +79,9 @@
   "organization": {
       "pattern": ["^organization$", "^name$"]
   },
-  "crpandprogram": {
-      "pattern": "^ILRI_crpandprogram$",
+  "crp": {
+      "pattern": ["^groups$", "display_name"],
+      "case_sensitive": true,
       "deduplicate": true
   },
   "ILRI_actyboundbox": {
