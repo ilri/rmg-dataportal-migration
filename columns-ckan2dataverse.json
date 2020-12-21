@@ -1,4 +1,7 @@
 {
+  "dataset-name": {
+      "pattern": "^name$"
+  },
   "alternativeTitle": {
       "pattern": "^name$"
   },
