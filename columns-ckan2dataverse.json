@@ -96,14 +96,8 @@
   "ILRI_actycitationacknowledge": {
       "pattern": "^ILRI_actycitationacknowledge$"
   },
-  "ILRI_actycontactemail": {
-      "pattern": "^ILRI_actycontactemail$"
-  },
-  "ILRI_actycontactperson": {
-      "pattern": "^ILRI_actycontactperson$"
-  },
-  "ILRI_actycustodian": {
-      "pattern": "^(ILRI_actycustodian|ILRI_actycustodianemail)$"
+  "datasetContact": {
+      "pattern": "^(ILRI_actycustodian|ILRI_actycustodianemail|ILRI_actycontactperson|ILRI_actycontactemail)$"
   },
   "dcterms.available": {
       "pattern": "^ILRI_actydatavailable$"
