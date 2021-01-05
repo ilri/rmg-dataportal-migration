@@ -11,13 +11,13 @@
   "alternativeURL": {
       "pattern": "^ILRI_prjwebsite$"
   },
-  "authors (PIs)": {
-      "pattern": "^(ILRI_actypi|ILRI_prjpi|ILRI_prjstaff|ILRI_actystaff$)",
+  "author": {
+      "pattern": "^(ILRI_actypi|ILRI_prjpi)$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributors (staff)": {
-      "pattern": "^(ILRI_prjstaff|ILRI_actystaff$)",
+  "contributor": {
+      "pattern": "^(ILRI_prjstaff|ILRI_actystaff)$",
       "case_sensitive": true,
       "deduplicate": true
   },
