@@ -2,9 +2,6 @@
   "dataset-name": {
       "pattern": "^name$"
   },
-  "alternativeTitle": {
-      "pattern": "^name$"
-  },
   "title": {
       "pattern": "^title$"
   },
@@ -37,8 +34,9 @@
   "publicationCitation": {
       "pattern": "^ILRI_actycitation$"
   },
-  "Project Abstract": {
-      "pattern": "^ILRI_prjabstract$"
+  "dsDescription": {
+      "pattern": "^(ILRI_prjabstract|notes)$",
+      "deduplicate": true
   },
   "Project Region": {
       "pattern": "^ILRI_prjregions$",
@@ -64,9 +62,6 @@
   },
   "Activity Species": {
       "pattern": "^ILRI_actyspecies$"
-  },
-  "Abstract": {
-      "pattern": "^notes$"
   },
   "grantNumberAgency": {
       "pattern": "^ILRI_prjdonor$"
