@@ -34,9 +34,6 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "publicationCitation": {
-      "pattern": "^ILRI_actycitation$"
-  },
   "dsDescription": {
       "pattern": "^(ILRI_prjabstract|notes)$",
       "deduplicate": true
@@ -96,7 +93,7 @@
   "ILRI_actyboundboxcenter": {
       "pattern": "^ILRI_actyboundboxcenter$"
   },
-  "ILRI_actycitationacknowledge": {
+  "notesText": {
       "pattern": "^ILRI_actycitationacknowledge$"
   },
   "datasetContact": {
