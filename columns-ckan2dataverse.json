@@ -38,20 +38,12 @@
       "pattern": "^(ILRI_prjabstract|notes)$",
       "deduplicate": true
   },
-  "Project Region": {
-      "pattern": "^ILRI_prjregions$",
+  "geographicCoverage (otherGeographicCoverage)": {
+      "pattern": "^(ILRI_prjregions|ILRI_actyregions)$",
       "deduplicate": true
   },
-  "Activity Region": {
-      "pattern": "^ILRI_actyregions$",
-      "deduplicate": true
-  },
-  "Project Country": {
-      "pattern": "^ILRI_prjcountries$",
-      "deduplicate": true
-  },
-  "Activity Country": {
-      "pattern": "^ILRI_actycountries$",
+  "geographicCoverage (country)": {
+      "pattern": "^(ILRI_prjcountries|ILRI_actycountries)$",
       "deduplicate": true
   },
   "Project Subject": {
