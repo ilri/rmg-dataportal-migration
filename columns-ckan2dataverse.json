@@ -46,14 +46,12 @@
       "pattern": "^(ILRI_prjcountries|ILRI_actycountries)$",
       "deduplicate": true
   },
-  "Project Subject": {
-      "pattern": "^ILRI_prjsubjects$"
+  "keyword": {
+      "pattern": "^(ILRI_prjsubjects|ILRI_prjspecies|ILRI_actyspecies)$"
   },
-  "Project Species": {
-      "pattern": "^ILRI_prjspecies$"
-  },
-  "Activity Species": {
-      "pattern": "^ILRI_actyspecies$"
+  "keyword (AGROVOC)": {
+      "pattern": ["^tags$", "name"],
+      "deduplicate": true
   },
   "grantNumberAgency": {
       "pattern": "^ILRI_prjdonor$"
@@ -66,10 +64,6 @@
   },
   "Activity Product": {
       "pattern": "^ILRI_actyproduct$"
-  },
-  "AGROVOC subjects": {
-      "pattern": ["^tags$", "name"],
-      "deduplicate": true
   },
   "organization": {
       "pattern": ["^organization$", "^name$"]
