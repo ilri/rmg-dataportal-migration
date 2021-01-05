@@ -29,6 +29,11 @@
       "case_sensitive": true,
       "deduplicate": true
   },
+  "Resources": {
+      "pattern": ["^resources$", "^name$"],
+      "case_sensitive": true,
+      "deduplicate": true
+  },
   "Format": {
       "pattern": ["^resources$", "^format$"],
       "case_sensitive": true,
