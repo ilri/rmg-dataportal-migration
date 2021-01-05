@@ -16,12 +16,15 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor": {
+  "contributor (Researcher)": {
       "pattern": "^(ILRI_prjstaff|ILRI_actystaff)$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "partners": {
+  "contributor (Data Curator)": {
+      "pattern": "^ILRI_actycustodian$"
+  },
+  "contributor (Other)": {
       "pattern": "^(ILRI_prjpartners|ILRI_actypartners)$",
       "case_sensitive": true,
       "deduplicate": true
