@@ -16,18 +16,21 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor (Researcher)": {
+  "contributor (contributorType=Researcher)": {
       "pattern": "^(ILRI_prjstaff|ILRI_actystaff)$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor (Data Curator)": {
+  "contributor (contributorType=Data Curator)": {
       "pattern": "^ILRI_actycustodian$"
   },
-  "contributor (Other)": {
+  "contributor (contributorType=Other)": {
       "pattern": "^(ILRI_prjpartners|ILRI_actypartners)$",
       "case_sensitive": true,
       "deduplicate": true
+  },
+  "contributor (contributorType=Rights Holder)": {
+      "pattern": "^ILRI_actyipownership$"
   },
   "Resources": {
       "pattern": ["^resources$", "^name$"],
@@ -39,13 +42,20 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "dsDescription": {
+  "dsDescription (dsDescriptionValue)": {
       "pattern": "^(ILRI_prjabstract|notes)$",
       "deduplicate": true
   },
-  "geographicCoverage (otherGeographicCoverage)": {
-      "pattern": "^(ILRI_prjregions|ILRI_actyregions)$",
+  "dsDescription (dsDescriptionValue beware commas)": {
+      "pattern": "^ILRI_actyotheruse$",
       "deduplicate": true
+  },
+  "geographicCoverage (otherGeographicCoverage)": {
+      "pattern": "^(ILRI_prjregions|ILRI_actyregions|ILRI_actyprojection)$",
+      "deduplicate": true
+  },
+  "geographicCoverage (otherGeographicCoverage with note about boundbox center)": {
+      "pattern": "^ILRI_actyboundboxcenter$"
   },
   "geographicCoverage (country)": {
       "pattern": "^(ILRI_prjcountries|ILRI_actycountries)$",
@@ -67,10 +77,7 @@
   "license": {
       "pattern": "^license_id$"
   },
-  "Activity Product": {
-      "pattern": "^ILRI_actyproduct$"
-  },
-  "organization": {
+  "producer (producerAbbreviation)": {
       "pattern": ["^organization$", "^name$"]
   },
   "crp": {
@@ -78,67 +85,45 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "ILRI_actyboundbox": {
+  "geographicBoundingBox (extract into four columns?)": {
       "pattern": "^ILRI_actyboundbox$"
-  },
-  "ILRI_actyboundboxcenter": {
-      "pattern": "^ILRI_actyboundboxcenter$"
   },
   "notesText": {
       "pattern": "^ILRI_actycitationacknowledge$"
   },
-  "datasetContact": {
-      "pattern": "^(ILRI_actycustodian|ILRI_actycustodianemail|ILRI_actycontactperson|ILRI_actycontactemail)$"
+  "datasetContact (datasetContactName)": {
+      "pattern": "^(ILRI_actycustodian|ILRI_actycontactperson)$",
+      "deduplicate": true
   },
-  "dcterms.available": {
+  "datasetContact (datasetContactEmail)": {
+      "pattern": "^(ILRI_actycustodianemail|ILRI_actycontactemail|ILRI_prjpiemail|ILRI_actypiemail)$",
+      "deduplicate": true
+  },
+  "dateOfDeposit": {
       "pattern": "^ILRI_actydatavailable$"
   },
-  "ILRI_actydatecollected": {
+  "dateOfCollection (dateOfCollectionStart)": {
       "pattern": "^ILRI_actydatecollected$"
   },
-  "ILRI_actydatecollectedend": {
+  "dateOfCollection (dateOfCollectionEnd)": {
       "pattern": "^ILRI_actydatecollectedend$"
   },
-  "ILRI_actyfarmconsent": {
+  "socialScienceNotes (socialScienceNotesType=Consent, socialScienceNotesText=Yes)": {
       "pattern": "^ILRI_actyfarmconsent$"
   },
-  "ILRI_actyipownership": {
-      "pattern": "^ILRI_actyipownership$"
-  },
-  "ILRI_actymapextent": {
+  "ILRI_actymapextent (ignore)": {
       "pattern": "^ILRI_actymapextent$"
   },
-  "ILRI_actymapzoom": {
-      "pattern": "^ILRI_actymapzoom$"
-  },
-  "subregion": {
+  "geographicCoverage (state)": {
       "pattern": "^ILRI_actynatlevel$"
   },
-  "ILRI_actyotheruse": {
-      "pattern": "^ILRI_actyotheruse$"
-  },
-  "ILRI_actypiemail": {
-      "pattern": "^ILRI_actypiemail$"
-  },
-  "ILRI_actyprojection": {
-      "pattern": "^ILRI_actyprojection$"
-  },
-  "ILRI_actyresolution": {
-      "pattern": "^ILRI_actyresolution$"
-  },
-  "ILRI_prjedate": {
+  "timePeriodCovered (timePeriodCoveredStart)": {
       "pattern": "^ILRI_prjedate$"
   },
-  "ILRI_prjpiemail": {
-      "pattern": "^ILRI_prjpiemail$"
-  },
-  "ILRI_prjsdate": {
+  "timePeriodCovered (timePeriodCoveredEnd)": {
       "pattern": "^ILRI_prjsdate$"
   },
-  "isopen": {
+  "isopen (delete)": {
       "pattern": "^isopen$"
-  },
-  "type": {
-      "pattern": "^type$"
   }
 }
