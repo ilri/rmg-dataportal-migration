@@ -118,10 +118,10 @@
       "pattern": "^ILRI_actynatlevel$"
   },
   "timePeriodCovered (timePeriodCoveredStart)": {
-      "pattern": "^ILRI_prjedate$"
+      "pattern": "^ILRI_prjsdate$"
   },
   "timePeriodCovered (timePeriodCoveredEnd)": {
-      "pattern": "^ILRI_prjsdate$"
+      "pattern": "^ILRI_prjedate$"
   },
   "isopen (delete)": {
       "pattern": "^isopen$"
