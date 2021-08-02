@@ -2,34 +2,34 @@
   "dataset-name": {
       "pattern": "^name$"
   },
-  "title": {
+  "dataset title": {
       "pattern": "^title$"
   },
-  "subtitle": {
+  "project title": {
       "pattern": "^ILRI_prjtitle$"
   },
   "alternativeURL": {
       "pattern": "^ILRI_prjwebsite$"
   },
-  "author": {
-      "pattern": "^(ILRI_actypi|ILRI_prjpi)$",
+  "Project Manager (First Author)": {
+      "pattern": "^ILRI_prjpi|ILRI_actypi$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor (contributorType=Researcher)": {
+  "First and co-authors": {
       "pattern": "^(ILRI_prjstaff|ILRI_actystaff)$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor (contributorType=Data Curator)": {
+  "Data Curator": {
       "pattern": "^ILRI_actycustodian$"
   },
-  "contributor (contributorType=Other)": {
+  "Partners": {
       "pattern": "^(ILRI_prjpartners|ILRI_actypartners)$",
       "case_sensitive": true,
       "deduplicate": true
   },
-  "contributor (contributorType=Rights Holder)": {
+  "Affiliation": {
       "pattern": "^ILRI_actyipownership$"
   },
   "Resources": {
@@ -54,7 +54,7 @@
       "pattern": "^(ILRI_prjregions|ILRI_actyregions|ILRI_actyprojection)$",
       "deduplicate": true
   },
-  "geographicCoverage (otherGeographicCoverage with note about boundbox center)": {
+  "GPS coordinates": {
       "pattern": "^ILRI_actyboundboxcenter$"
   },
   "geographicCoverage (country)": {
@@ -68,10 +68,10 @@
       "pattern": ["^tags$", "name"],
       "deduplicate": true
   },
-  "grantNumberAgency": {
+  "Donor": {
       "pattern": "^ILRI_prjdonor$"
   },
-  "grantNumberValue": {
+  "Donor agreement number": {
       "pattern": "^ILRI_prjgrant$"
   },
   "license": {
@@ -85,7 +85,7 @@
       "case_sensitive": true,
       "deduplicate": true
   },
-  "geographicBoundingBox (extract into four columns?)": {
+  "geographicBoundingBox": {
       "pattern": "^ILRI_actyboundbox$"
   },
   "notesText": {
@@ -99,13 +99,22 @@
       "pattern": "^(ILRI_actycustodianemail|ILRI_actycontactemail|ILRI_prjpiemail|ILRI_actypiemail)$",
       "deduplicate": true
   },
-  "dateOfDeposit": {
+  "date of online publication": {
       "pattern": "^ILRI_actydatavailable$"
   },
-  "dateOfCollection (dateOfCollectionStart)": {
+  "date of online publication 2 (if no ILRI_actydatavailable)": {
+      "pattern": "^metadata_created$"
+  },
+  "Project start date": {
+      "pattern": "^ILRI_prjsdate$"
+  },
+  "Project end date": {
+      "pattern": "^ILRI_prjedate$"
+  },
+  "Research period start": {
       "pattern": "^ILRI_actydatecollected$"
   },
-  "dateOfCollection (dateOfCollectionEnd)": {
+  "Research period end": {
       "pattern": "^ILRI_actydatecollectedend$"
   },
   "socialScienceNotes (socialScienceNotesType=Consent, socialScienceNotesText=Yes)": {
@@ -114,16 +123,7 @@
   "ILRI_actymapextent (ignore)": {
       "pattern": "^ILRI_actymapextent$"
   },
-  "geographicCoverage (state)": {
+  "Geographical Administrative Unit": {
       "pattern": "^ILRI_actynatlevel$"
-  },
-  "timePeriodCovered (timePeriodCoveredStart)": {
-      "pattern": "^ILRI_prjsdate$"
-  },
-  "timePeriodCovered (timePeriodCoveredEnd)": {
-      "pattern": "^ILRI_prjedate$"
-  },
-  "isopen (delete)": {
-      "pattern": "^isopen$"
   }
 }
